@@ -108,7 +108,7 @@ augroup javascript_autocmd
     autocmd FileType javascript set autoindent
     autocmd FileType javascript set textwidth=80
     " mapping for easy ; line endings
-    autocmd FileType javascript inoremap ;; <ESC>A;<CR>
+    autocmd FileType javascript inoremap <buffer> ;; <ESC>A;<CR>
 augroup END
 
 augroup java_autocmd
@@ -130,4 +130,12 @@ augroup END
 
 augroup css_autocmd
     autocmd FileType css inoremap <buffer> : :;<ESC>i
+augroup END
+
+augroup cpp_autocmd
+    autocmd!
+    autocmd FileType cpp set autoindent
+    autocmd FileType cpp set textwidth=80
+    " mapping for easy ; line endings
+    autocmd FileType cpp inoremap <buffer> ;; <ESC>A;<CR>
 augroup END
