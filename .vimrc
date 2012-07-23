@@ -35,7 +35,7 @@ set incsearch " ... Dynamically as they are typed
 map <leader>uh :let @/ = ""<CR>
 
 " highlights trailing white space when requested
-set listchars=tab:>-,trail:·,eol:$
+set listchars=tab:>-,trail:+,eol:$
 nmap <silent> <leader>s :set nolist!<CR>
 
 " allows for enter and shift-enter when in command mode
