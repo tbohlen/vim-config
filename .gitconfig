@@ -1,0 +1,26 @@
+[user]
+	name = Turner Bohlen
+	email = turnerbohlen@gmail.com
+[core]
+	autocrlf = input
+	safecrlf = true
+	editor = /usr/bin/vim
+[color]
+	ui = true
+[alias]
+    co = checkout
+    ci = commit
+    st = status
+    br = branch
+    hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
+    type = cat-file -t
+    dump = cat-file -p
+    graph = log --graph
+[merge]
+    summary = true
+    tool = p4merge 
+[mergetool "p4merge"]
+    cmd = p4merge "$BASE" "$LOCAL" "$REMOTE" "$MERGED"
+    keepBackup = false
+    trustExitCode = false
+    keepTemporaries = false
