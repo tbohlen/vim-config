@@ -1,0 +1,7 @@
+-moz-box-shadow: ${1:horiz} ${2:vert} ${3:blur} ${4:spread} ${5:#000000};
+-webkit-box-shadow: ${1} ${2} ${3} ${4} ${5};
+box-shadow: ${1} ${2} ${3} ${4} ${5};
+/* For IE 8 */
+-ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=${6:}, Direction=${7:}, Color='${5}')";
+/* For IE 5.5 - 7 */
+filter: progid:DXImageTransform.Microsoft.Shadow(Strength=${6}, Direction=${7}, Color='${5}');

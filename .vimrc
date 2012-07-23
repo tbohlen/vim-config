@@ -1,0 +1,107 @@
+call pathogen#infect()
+
+let mapleader = ","
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Spell checking
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+set spell
+" Pressing ,ss will toggle and untoggle spell checking
+map <leader>ss :setlocal spell!<cr>
+" Shortcuts using <leader>
+map <leader>sn ]s
+map <leader>sp [s
+map <leader>sa zg
+map <leader>s? z="
+
+" filetype highlighting and configuration
+set t_Co=256 " 256 colors available
+set background=dark
+colorscheme solarized
+syntax on
+
+" Show trailing whitepace and spaces before a tab:                                                                                  
+:highlight ExtraWhitespace ctermbg=darkgreen guibg=lightgreen                                                                       
+:autocmd Syntax * syn match ExtraWhitespace /\s\+$\| \+\ze\t/ 
+filetype on
+filetype plugin on
+filetype indent on
+
+" Search settings
+set ignorecase " / search only case sensitive if capital in search
+set smartcase " and * search still case sensitive
+set hlsearch " highlights search terms
+set incsearch " ... Dynamically as they are typed
+map <leader>uh :let @/ = ""<CR>
+
+" highlights trailing white space when requested
+set listchars=tab:>-,trail:·,eol:$
+nmap <silent> <leader>s :set nolist!<CR>
+
+" allows for enter and shift-enter when in command mode
+map <CR> i<CR><Esc>
+
+set history=500 " Vim remembers more past commands
+" switch ' and ` for use with marks. ' goes to exact mark position
+nnoremap ' `
+nnoremap ` '
+
+set history=500 " Vim remembers more past commands
+set hidden " allows better buffer management
+set number " show line numbers
+set autoindent " auto-indent
+set wildmenu " shows all tab-completion options
+set wildmode=list:longest " acts like terminal, completing as much as possible
+set title " adds a custom title to the Vim window
+set scrolloff=3 " increases buffer when scrolling off screen
+set backspace=indent,eol,start " intuitive backspacing, whatever that means
+runtime macros/matchit.vim " applies % switching to much more
+
+" change window splitting behavior
+set splitbelow
+set splitright
+
+" set up space indenting
+set tabstop=4
+set expandtab
+set softtabstop=4
+set shiftwidth=4
+
+" Support for vim powerline
+set nocompatible   " Disable vi-compatibility
+set laststatus=2   " Always show the statusline
+set encoding=utf-8 " Necessary to show unicode glyphs
+
+" support for saving Vim global session by typing SQ
+nmap SQ <ESC>:mksession! ~/.vim/Session.vim<CR>:wqa<CR>
+function! RestoreSession()
+    if argc() == 0 "Vim called without arguments
+        execute 'source ~/.vim/Session.vim'
+    end
+endfunction
+autocmd VimEnter * call RestoreSession()
+
+" allows jquery syntax highlighting in JavaScript
+au BufRead,BufNewFile jquery.*.js set ft=javascript syntax=jquery
+
+" FileType specific settings
+augroup json_autocmd 
+	autocmd! 
+	autocmd FileType json set autoindent 
+	autocmd FileType json set formatoptions=tcq2l 
+	autocmd FileType json set textwidth=80 
+	autocmd FileType json set foldmethod=syntax 
+augroup END
+
+augroup javascript_autocmd
+    autocmd!
+    autocmd FileType javascript set autoindent
+    autocmd FileType javascript set textwidth=80
+    autocmd FileType javascript set foldmethod=syntax
+    " mapping for easy ; line endings
+    inoremap ;; <ESC>A;<CR>
+augroup END
+augroup markdown_autocmd
+    autocmd FileType markdown set textwidth=80
+    autocmd FileType markdown set foldmethod=syntax
+augroup END
