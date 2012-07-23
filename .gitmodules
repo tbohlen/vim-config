@@ -1,0 +1,45 @@
+[submodule ".vim/bundle/closetag"]
+	path = .vim/bundle/closetag
+	url = git://github.com/vim-scripts/closetag.vim.git
+[submodule ".vim/bundle/coffee-script"]
+	path = .vim/bundle/coffee-script
+	url = git://github.com/kchmck/vim-coffee-script.git
+[submodule ".vim/bundle/delimitMate"]
+	path = .vim/bundle/delimitMate
+	url = git://github.com/Raimondi/delimitMate.git
+[submodule ".vim/bundle/nerd-commenter"]
+	path = .vim/bundle/nerd-commenter
+	url = git://github.com/scrooloose/nerdcommenter.git
+[submodule ".vim/bundle/nerd-tree"]
+	path = .vim/bundle/nerd-tree
+	url = git://github.com/scrooloose/nerdtree.git
+[submodule ".vim/bundle/super-tab"]
+	path = .vim/bundle/super-tab
+	url = git://github.com/ervandew/supertab.git
+[submodule ".vim/bundle/tlib"]
+	path = .vim/bundle/tlib
+	url = git://github.com/tomtom/tlib_vim.git
+[submodule ".vim/bundle/addon-mw-untils"]
+	path = .vim/bundle/addon-mw-untils
+	url = git://github.com/MarcWeber/vim-addon-mw-utils.git
+[submodule ".vim/bundle/solarized-colors"]
+	path = .vim/bundle/solarized-colors
+	url = git://github.com/altercation/vim-colors-solarized.git
+[submodule ".vim/bundle/snipmate"]
+	path = .vim/bundle/snipmate
+	url = git://github.com/garbas/vim-snipmate.git
+[submodule ".vim/bundle/fugative"]
+	path = .vim/bundle/fugative
+	url = git://github.com/tpope/vim-fugitive.git
+[submodule ".vim/bundle/jade"]
+	path = .vim/bundle/jade
+	url = git://github.com/digitaltoad/vim-jade.git
+[submodule ".vim/bundle/javascript"]
+	path = .vim/bundle/javascript
+	url = git://github.com/pangloss/vim-javascript.git
+[submodule ".vim/bundle/less"]
+	path = .vim/bundle/less
+	url = git://github.com/groenewege/vim-less.git
+[submodule ".vim/bundle/powerline"]
+	path = .vim/bundle/powerline
+	url = git://github.com/Lokaltog/vim-powerline.git
