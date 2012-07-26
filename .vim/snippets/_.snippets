@@ -5,3 +5,12 @@ snippet c)
 	`&enc[:2] == "utf" ? "©" : "(c)"` Copyright `strftime("%Y")` ${1:`g:snips_author`}. All Rights Reserved.${2}
 snippet date
 	`strftime("%Y-%m-%d")`
+snippet file
+	/********************************************************************\
+	Project: ${1:projectname}
+	File: ${2:`eval('bufname("%")')`}
+	Description: ${3: file Description}
+	Author: ${4:Turner Bohlen (www.turnerbohlen.com)}
+	Created: ${5:`system("date +%m/%d/%Y")`}
+	Copyright `system("date +%Y")` ${6:Turner Bohlen}
+	\********************************************************************/
