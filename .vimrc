@@ -42,9 +42,13 @@ nmap <silent> <leader>s :set nolist!<CR>
 map <CR> i<CR><Esc>
 
 set history=500 " Vim remembers more past commands
+
 " switch ' and ` for use with marks. ' goes to exact mark position
 nnoremap ' `
 nnoremap ` '
+
+" use ; instead of : for commands such as write
+nnoremap ; :
 
 set history=500 " Vim remembers more past commands
 set hidden " allows better buffer management
