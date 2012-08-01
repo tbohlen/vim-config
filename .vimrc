@@ -27,6 +27,9 @@ filetype on
 filetype plugin on
 filetype indent on
 
+" omnicomplete code completion
+set ofu=syntaxcomplete#Complete
+
 " Search settings
 set ignorecase " / search only case sensitive if capital in search
 set smartcase " and * search still case sensitive
