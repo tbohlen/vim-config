@@ -1,1 +1,1 @@
-This contains my vim configuration. link.sh symlinks the files to their necessary locations. Beware, though, this overwrites any files that already sit at ~/.vimrc and ~/.vim/
+This contains my vim configuration. install.sh symlinks the files to their necessary locations. Beware, though, this overwrites any files that already sit at ~/.vimrc and ~/.vim/
