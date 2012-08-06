@@ -112,3 +112,5 @@ augroup markdown_autocmd
     autocmd FileType markdown set textwidth=80
     autocmd FileType markdown set foldmethod=syntax
 augroup END
+augroup css_autocmp
+    autocmd FileType css inoremap : :;<ESC>i
