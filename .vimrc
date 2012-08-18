@@ -106,11 +106,14 @@ augroup javascript_autocmd
     autocmd FileType javascript set textwidth=80
     autocmd FileType javascript set foldmethod=syntax
     " mapping for easy ; line endings
-    inoremap ;; <ESC>A;<CR>
+    autocmd FileType javascript inoremap ;; <ESC>A;<CR>
 augroup END
+
 augroup markdown_autocmd
     autocmd FileType markdown set textwidth=80
     autocmd FileType markdown set foldmethod=syntax
 augroup END
-augroup css_autocmp
-    autocmd FileType css inoremap : :;<ESC>i
+
+"augroup css_autocmd
+    "autocmd FileType css inoremap : :;<ESC>i
+"augroup END
