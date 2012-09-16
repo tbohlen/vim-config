@@ -81,9 +81,7 @@ set encoding=utf-8 " Necessary to show unicode glyphs
 
 "delimit mate preferences
 
-imap <expr> <CR> delimitMate#WithinEmptyPair() ?
-         \ "\<C-R>=delimitMate#ExpandReturn()\<CR>" :
-         \ <CR>
+imap <expr> <CR> delimitMate#WithinEmptyPair() ? "\<C-R>=delimitMate#ExpandReturn()\<CR>" : "<CR>"
 
 " support for saving Vim global session by typing SQ
 nmap SQ <ESC>:mksession! ~/.vim/Session.vim<CR>:wqa<CR>
