@@ -101,21 +101,26 @@ augroup json_autocmd
 	autocmd FileType json set autoindent 
 	autocmd FileType json set formatoptions=tcq2l 
 	autocmd FileType json set textwidth=80 
-	autocmd FileType json set foldmethod=syntax 
 augroup END
 
 augroup javascript_autocmd
     autocmd!
     autocmd FileType javascript set autoindent
     autocmd FileType javascript set textwidth=80
-    autocmd FileType javascript set foldmethod=syntax
     " mapping for easy ; line endings
     autocmd FileType javascript inoremap ;; <ESC>A;<CR>
 augroup END
 
+augroup java_autocmd
+    autocmd!
+    autocmd FileType java set autoindent
+    autocmd FileType java set textwidth=80
+    " mapping for easy ; line endings
+    autocmd FileType java inoremap ;; <ESC>A;<CR>
+augroup END
+
 augroup markdown_autocmd
     autocmd FileType markdown set textwidth=80
-    autocmd FileType markdown set foldmethod=syntax
 augroup END
 
 "augroup css_autocmd
