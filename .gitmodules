@@ -43,3 +43,6 @@
 [submodule ".vim/bundle/powerline"]
 	path = .vim/bundle/powerline
 	url = git://github.com/Lokaltog/vim-powerline.git
+[submodule ".vim/bundle/matlab-snippets"]
+	path = .vim/bundle/matlab-snippets
+	url = git://github.com/arokux/matlab-snippets.git
