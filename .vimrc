@@ -99,7 +99,7 @@ au BufRead,BufNewFile jquery.*.js set ft=javascript syntax=jquery
 augroup json_autocmd 
 	autocmd! 
 	autocmd FileType json set autoindent 
-	autocmd FileType json set formatoptions=tcq2l 
+	autocmd FileType json :setlocal formatoptions=tcq2l 
 	autocmd FileType json set textwidth=80 
 augroup END
 
@@ -116,13 +116,18 @@ augroup java_autocmd
     autocmd FileType java set autoindent
     autocmd FileType java set textwidth=80
     " mapping for easy ; line endings
-    autocmd FileType java inoremap ;; <ESC>A;<CR>
+    autocmd FileType java inoremap <buffer> ;; <ESC>A;<CR>
 augroup END
 
 augroup markdown_autocmd
     autocmd FileType markdown set textwidth=80
 augroup END
 
-"augroup css_autocmd
-    "autocmd FileType css inoremap : :;<ESC>i
-"augroup END
+augroup scheme_autocmd
+    autocmd!
+    autocmd FileType scheme set autoindent
+augroup END
+
+augroup css_autocmd
+    autocmd FileType css inoremap <buffer> : :;<ESC>i
+augroup END
