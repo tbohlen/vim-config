@@ -139,3 +139,15 @@ augroup cpp_autocmd
     " mapping for easy ; line endings
     autocmd FileType cpp inoremap <buffer> ;; <ESC>A;<CR>
 augroup END
+
+augroup tex_autocmd
+    autocmd!
+    autocmd FileType tex set autoindent
+    autocmd FileType tex set textwidth=80
+augroup END
+
+augroup matlab_autocmd
+    autocmd!
+    autocmd FileType m set autoindent
+    autocmd FileType m set textwidth=80
+augroup END
