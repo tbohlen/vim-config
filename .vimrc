@@ -21,11 +21,15 @@ colorscheme solarized
 syntax on
 
 " Show trailing whitepace and spaces before a tab:                                                                                  
-:highlight ExtraWhitespace ctermbg=darkgreen guibg=lightgreen                                                                       
-:autocmd Syntax * syn match ExtraWhitespace /\s\+$\| \+\ze\t/ 
+highlight ExtraWhitespace ctermbg=darkgreen guibg=lightgreen                                                                       
+autocmd Syntax * syn match ExtraWhitespace /\s\+$\| \+\ze\t/ 
 filetype on
 filetype plugin on
 filetype indent on
+filetype indent on
+
+" fixing the html identation to be how I like it
+let g:html_indent_inctags = "html,body,head,tbody"
 
 " omnicomplete code completion
 set ofu=syntaxcomplete#Complete
@@ -129,7 +133,7 @@ augroup scheme_autocmd
 augroup END
 
 augroup css_autocmd
-    autocmd FileType css inoremap <buffer> : :;<ESC>i
+    autocmd FileType css inoremap <buffer> ;; <ESC>A;<CR>
 augroup END
 
 augroup cpp_autocmd
@@ -148,6 +152,10 @@ augroup END
 
 augroup matlab_autocmd
     autocmd!
-    autocmd FileType m set autoindent
-    autocmd FileType m set textwidth=80
+    autocmd FileType matlab set autoindent
+augroup END
+
+augroup arduino_group
+    autocmd!
+    autocmd FileType arduino set textwidth=80
 augroup END
