@@ -148,6 +148,8 @@ augroup tex_autocmd
     autocmd!
     autocmd FileType tex set autoindent
     autocmd FileType tex set textwidth=80
+    autocmd FileType plaintex set autoindent
+    autocmd FileType plaintex set textwidth=80
 augroup END
 
 augroup matlab_autocmd
