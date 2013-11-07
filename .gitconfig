@@ -5,6 +5,7 @@
 	autocrlf = input
 	safecrlf = true
 	editor = /usr/bin/vim
+	eol = lf
 [color]
 	ui = true
 [alias]
@@ -24,3 +25,5 @@
     keepBackup = false
     trustExitCode = false
     keepTemporaries = false
+[push]
+	default = simple
