@@ -83,6 +83,9 @@ set nocompatible   " Disable vi-compatibility
 set laststatus=2   " Always show the statusline
 set encoding=utf-8 " Necessary to show unicode glyphs
 
+" always use unix file format. Specifically, line endings
+set ff=unix
+
 "delimit mate preferences
 
 imap <expr> <CR> delimitMate#WithinEmptyPair() ? "\<C-R>=delimitMate#ExpandReturn()\<CR>" : "<CR>"
