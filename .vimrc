@@ -144,6 +144,14 @@ augroup cpp_autocmd
     autocmd FileType cpp inoremap <buffer> ;; <ESC>A;<CR>
 augroup END
 
+augroup clojure_autocmd
+    autocmd!
+    autocmd FileType clojure set autoindent
+    autocmd FileType clojure set textwidth=80
+    " mapping for easy ; line endings
+    autocmd FileType clojure inoremap <buffer> ;; <ESC>A;<CR>
+augroup END
+
 augroup tex_autocmd
     autocmd!
     autocmd FileType tex set autoindent
@@ -160,4 +168,10 @@ augroup END
 augroup arduino_group
     autocmd!
     autocmd FileType arduino set textwidth=80
+augroup END
+
+augroup verilog_autocmd
+    autocmd!
+    autocmd FileType verilog set autoindent
+    autocmd FileType verilog set textwidth=80
 augroup END
