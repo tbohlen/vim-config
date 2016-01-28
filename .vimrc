@@ -23,16 +23,28 @@ syntax on
 " Show trailing whitepace and spaces before a tab:                                                                                  
 highlight ExtraWhitespace ctermbg=darkgreen guibg=lightgreen                                                                       
 autocmd Syntax * syn match ExtraWhitespace /\s\+$\| \+\ze\t/ 
+
 filetype on
 filetype plugin on
 filetype indent on
 filetype indent on
+
+" supertab settings
+let g:SuperTabDefaultCompletionType = "context"
 
 " fixing the html identation to be how I like it
 let g:html_indent_inctags = "html,body,head,tbody"
 
 " omnicomplete code completion
 set ofu=syntaxcomplete#Complete
+
+" support for SyntaxComplete OMNI keywords
+if has("autocmd") && exists("+omnifunc")
+    autocmd Filetype *
+        \    if &omnifunc == "" |
+        \        setlocal omnifunc=syntaxcomplete#Complete |
+        \    endif
+endif
 
 " Search settings
 set ignorecase " / search only case sensitive if capital in search
@@ -74,7 +86,7 @@ set splitright
 
 " set up space indenting
 set tabstop=4
-set expandtab
+" set expandtab
 set softtabstop=4
 set shiftwidth=4
 
@@ -99,8 +111,12 @@ function! RestoreSession()
 endfunction
 autocmd VimEnter * call RestoreSession()
 
+
 " allows jquery syntax highlighting in JavaScript
 au BufRead,BufNewFile jquery.*.js set ft=javascript syntax=jquery
+
+" enable html and css highlighting in javascript files
+let g:javascript_enable_domhtmlcss = 1
 
 " FileType specific settings
 augroup json_autocmd 
