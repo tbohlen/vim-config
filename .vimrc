@@ -8,6 +8,7 @@ let mapleader = ","
 set spell
 " Pressing ,ss will toggle and untoggle spell checking
 map <leader>ss :setlocal spell!<cr>
+
 " Shortcuts using <leader>
 map <leader>sn ]s
 map <leader>sp [s
@@ -24,13 +25,14 @@ syntax on
 highlight ExtraWhitespace ctermbg=darkgreen guibg=lightgreen                                                                       
 autocmd Syntax * syn match ExtraWhitespace /\s\+$\| \+\ze\t/ 
 
+" shows hidden characters when requested
+set listchars=tab:>-,trail:+,eol:$
+nmap <silent> <leader>s :set nolist!<CR>
+
 filetype on
 filetype plugin on
 filetype indent on
 filetype indent on
-
-" supertab settings
-let g:SuperTabDefaultCompletionType = "context"
 
 " fixing the html identation to be how I like it
 let g:html_indent_inctags = "html,body,head,tbody"
@@ -46,28 +48,24 @@ if has("autocmd") && exists("+omnifunc")
         \    endif
 endif
 
+" remapping required in order to get snipmate working... no idea why
+imap <expr> <C-J> pumvisible() ? '<esc><Plug>snipMateNextOrTrigger' : '<Plug>snipMateNextOrTrigger'
+
+"""""""""""""""""""""""""""""""""
 " Search settings
+"""""""""""""""""""""""""""""""""
 set ignorecase " / search only case sensitive if capital in search
 set smartcase " and * search still case sensitive
 set hlsearch " highlights search terms
 set incsearch " ... Dynamically as they are typed
 map <leader>uh :let @/ = ""<CR>
 
-" highlights trailing white space when requested
-set listchars=tab:>-,trail:+,eol:$
-nmap <silent> <leader>s :set nolist!<CR>
-
 " allows for enter and shift-enter when in command mode
 map <CR> i<CR><Esc>
-
-set history=500 " Vim remembers more past commands
 
 " switch ' and ` for use with marks. ' goes to exact mark position
 nnoremap ' `
 nnoremap ` '
-
-" use ; instead of : for commands such as write
-nnoremap ; :
 
 set history=500 " Vim remembers more past commands
 set hidden " allows better buffer management
@@ -86,7 +84,7 @@ set splitright
 
 " set up space indenting
 set tabstop=4
-" set expandtab
+set expandtab
 set softtabstop=4
 set shiftwidth=4
 
@@ -99,7 +97,6 @@ set encoding=utf-8 " Necessary to show unicode glyphs
 set ff=unix
 
 "delimit mate preferences
-
 imap <expr> <CR> delimitMate#WithinEmptyPair() ? "\<C-R>=delimitMate#ExpandReturn()\<CR>" : "<CR>"
 
 " support for saving Vim global session by typing SQ
