@@ -50,9 +50,6 @@ if has("autocmd") && exists("+omnifunc")
         \    endif
 endif
 
-" remapping required in order to get snipmate working... no idea why
-imap <expr> <C-J> pumvisible() ? '<esc><Plug>snipMateNextOrTrigger' : '<Plug>snipMateNextOrTrigger'
-
 """""""""""""""""""""""""""""""""
 " Search settings
 """""""""""""""""""""""""""""""""
