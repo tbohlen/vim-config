@@ -1,4 +1,4 @@
-call pathogen#infect()
+execute pathogen#infect()
 
 let mapleader = ","
 
@@ -15,11 +15,13 @@ map <leader>sp [s
 map <leader>sa zg
 map <leader>s? z="
 
-" filetype highlighting and configuration
-set t_Co=256 " 256 colors available
-set background=dark
-colorscheme solarized
+" syntax highlighting preferences
 syntax on
+set background=dark
+let g:solarized_visibility="high"
+let g:solarized_contrast="high"
+let g:solarized_termcolors=16
+colorscheme solarized
 
 " Show trailing whitepace and spaces before a tab:                                                                                  
 highlight ExtraWhitespace ctermbg=darkgreen guibg=lightgreen                                                                       
@@ -108,14 +110,19 @@ function! RestoreSession()
 endfunction
 autocmd VimEnter * call RestoreSession()
 
-
+"""""""""""""""""""""""""""""""""""""""""
+" Javascript settings
+"""""""""""""""""""""""""""""""""""""""""
+" jsx highlighting in javascript files
+let g:jsx_ext_required=0
 " allows jquery syntax highlighting in JavaScript
 au BufRead,BufNewFile jquery.*.js set ft=javascript syntax=jquery
-
 " enable html and css highlighting in javascript files
-let g:javascript_enable_domhtmlcss = 1
+let g:javascript_enable_domhtmlcss=1
 
+"""""""""""""""""""""""""""""""""""""""""
 " FileType specific settings
+"""""""""""""""""""""""""""""""""""""""""
 augroup json_autocmd 
 	autocmd! 
 	autocmd FileType json set autoindent 
