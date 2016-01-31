@@ -99,16 +99,16 @@ set encoding=utf-8 " Necessary to show unicode glyphs
 set ff=unix
 
 "delimit mate preferences
-imap <expr> <CR> delimitMate#WithinEmptyPair() ? "\<C-R>=delimitMate#ExpandReturn()\<CR>" : "<CR>"
+"imap <expr> <CR> delimitMate#WithinEmptyPair() ? "\<C-R>=delimitMate#ExpandReturn()\<CR>" : "<CR>"
 
 " support for saving Vim global session by typing SQ
-nmap SQ <ESC>:mksession! ~/.vim/Session.vim<CR>:wqa<CR>
-function! RestoreSession()
-    if argc() == 0 "Vim called without arguments
-        execute 'source ~/.vim/Session.vim'
-    end
-endfunction
-autocmd VimEnter * call RestoreSession()
+"nmap SQ <ESC>:mksession! ~/.vim/Session.vim<CR>:wqa<CR>
+"function! RestoreSession()
+    "if argc() == 0 "Vim called without arguments
+        "execute 'source ~/.vim/Session.vim'
+    "end
+"endfunction
+"autocmd VimEnter * call RestoreSession()
 
 """""""""""""""""""""""""""""""""""""""""
 " Javascript settings
