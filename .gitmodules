@@ -27,7 +27,7 @@
 	url = https://github.com/garbas/vim-snipmate.git
 [submodule ".vim/bundle/vim-snippets"]
 	path = .vim/bundle/vim-snippets
-	url = https://github.com/honza/vim-snippets.git
+	url = https://github.com/tbohlen/vim-snippets.git
 [submodule ".vim/bundle/vim-closetag"]
 	path = .vim/bundle/vim-closetag
 	url = https://github.com/alvan/vim-closetag.git
