@@ -15,6 +15,9 @@ map <leader>sp [s
 map <leader>sa zg
 map <leader>s? z="
 
+" map upper-case Rename to lower-case Rename
+cnoreabbrev rename Rename
+
 " syntax highlighting preferences
 syntax on
 set background=dark
