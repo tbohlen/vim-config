@@ -36,8 +36,13 @@ filetype plugin on
 filetype indent on
 filetype indent on
 
+"""""""""""""""""""""""""""""""""""""""
+" HTML Settings
+"""""""""""""""""""""""""""""""""""""""
 " fixing the html identation to be how I like it
 let g:html_indent_inctags = "html,body,head,tbody"
+"files to use html tag closing in
+let g:closetag_filenames = "*.html,*.xhtml,*.js,*.jsx"
 
 " omnicomplete code completion
 set ofu=syntaxcomplete#Complete
