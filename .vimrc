@@ -38,6 +38,8 @@ filetype on
 filetype plugin on
 filetype indent on
 filetype indent on
+" for the css indentation plugin
+filetype plugin indent on
 
 """""""""""""""""""""""""""""""""""""""
 " HTML Settings
