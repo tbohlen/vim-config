@@ -2,6 +2,9 @@ execute pathogen#infect()
 
 let mapleader = ","
 
+" enable xml tag matching
+runtime macros/matchit.vim
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Spell checking
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
