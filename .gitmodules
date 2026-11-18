@@ -39,4 +39,4 @@
 	url = https://github.com/hail2u/vim-css3-syntax.git
 [submodule ".vim/bundle/vim-surround"]
 	path = .vim/bundle/vim-surround
-	url = git://github.com/tpope/vim-surround.git
+	url = https://github.com/tpope/vim-surround.git

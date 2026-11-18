@@ -10,6 +10,10 @@ append_once() {
     grep -qxF "$1" "$2" || echo "$1" >> "$2"
 }
 
+# fetch the vim plugins (git submodules under .vim/bundle, including the
+# solarized color scheme), which a plain git clone leaves empty
+git -C "${DIR}" submodule update --init || exit 1
+
 # remove existing files
 rm "${HOME}/.vimrc"
 rm "${HOME}/.dircolors"

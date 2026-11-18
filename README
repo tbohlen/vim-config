@@ -1,4 +1,4 @@
-This contains my vim and shell configuration. install.sh symlinks the files to their necessary locations. Beware, though, this overwrites any files that already sit at ~/.vimrc and ~/.vim/
+This contains my vim and shell configuration. install.sh downloads the vim plugins (git submodules, including the solarized color scheme) and symlinks the files to their necessary locations. Beware, though, this overwrites any files that already sit at ~/.vimrc and ~/.vim/
 
 For the shell in $SHELL (zsh or bash), install.sh also:
   - symlinks .zsh-aliases or .bash_aliases into ~ and sources it from ~/.zshrc or ~/.bashrc
